@@ -4,17 +4,17 @@ import { createContext } from "react";
 export const CanvasContext = createContext(null);
 
 export default function Canvas({ width, height, children }) {
-  const [canv, setCanv] = useState(null);
+  const [canvasCurrent, setCanvasCurrent] = useState(null);
   const canvasEl = useRef(null);
 
   useEffect(() => {
     if (canvasEl.current) {
-      setCanv(canvasEl.current);
+      setCanvasCurrent(canvasEl.current);
     }
   }, [canvasEl]);
 
   return (
-    <CanvasContext.Provider value={canv}>
+    <CanvasContext.Provider value={canvasCurrent}>
       <canvas width={width} height={height} ref={canvasEl}></canvas>
       {children}
     </CanvasContext.Provider>

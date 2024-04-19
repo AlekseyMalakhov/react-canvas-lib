@@ -5,7 +5,7 @@ import Rectangle from "./lib/Rectangle";
 function App() {
   return (
     <main>
-      <div>Canvas library</div>
+      <h3>Canvas library</h3>
       <Canvas width={300} height={150}>
         <Line start={[20, 30]} end={[80, 150]} />
         <Rectangle start={[70, 60]} end={[170, 100]} />

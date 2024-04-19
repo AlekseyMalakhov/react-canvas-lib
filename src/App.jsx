@@ -1,5 +1,12 @@
+import Canvas from "./lib/Canvas";
+
 function App() {
-  return <div>Hi all</div>;
+  return (
+    <main>
+      <div>Canvas library</div>
+      <Canvas width={300} height={150}></Canvas>
+    </main>
+  );
 }
 
 export default App;
